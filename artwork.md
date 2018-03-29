@@ -3,6 +3,7 @@ layout: page
 title: Portraits
 subtitle: These are some of the pencil sketches I made.
 tags: [portraits, pencil-sketches]
+comments: true
 ---
 
 ### A Portrait of Guru Gobind Singh Ji
@@ -18,12 +19,14 @@ tags: [portraits, pencil-sketches]
 ![Sahibzada Fateh Singh Ji](/img/artwork/sahibzada-fateh-singh-ji.jpg)
 ---
 
+
 ### A Portrait of Natalie Portman
 
 ![natalie-portman1.jpg](/img/artwork/natalie-portman1.jpg)
 
 ![natalie-portman.jpg](/img/artwork/natalie-portman.jpg)
 ---
+
 
 ### Made for others -
 
