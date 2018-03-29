@@ -1,16 +1,26 @@
 ---
 layout: page
 title: About me
-subtitle: Why you'd want to go on a date with me
+subtitle: Hello! 
 ---
 
-My name is Inigo Montoya. I have the following qualities:
+My name is Amandeep Singh. I am a third year computer science student at NSIT, Unversity of Delhi.
 
-- I rock a great mustache
-- I'm extremely loyal to my family
+I like the following things-
+- Algorithms
+- Data Structures
+- Web Development(Ruby on Rails)
+- Sketching 
+- Cooking
+- Reading
+- And some other things.
 
-What else do you need?
 
-### my history
+You can read some post you like here or Have a look at my [Projects](https://amandeep511997.github.io/projects/) or admire some of my [Art Work](https://amandeep511997.github.io/artwork/).
 
-To be honest, I'm having some trouble remembering right now, so why don't you just watch [my movie](http://en.wikipedia.org/wiki/The_Princess_Bride_%28film%29) and it will answer **all** your questions.
+
+### Some of my post on Quora -
+- [How to find second best MST?](http://qr.ae/TU1Cbi)
+- [How to find diameter of a tree?](http://qr.ae/TU1Cbc)
+- [How to learn Rails in a Project oriented manner](http://qr.ae/TU1Cb9)
+
