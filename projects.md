@@ -4,6 +4,11 @@ title: Projects
 subtitle: These are some of the projects I have worked upon
 ---
 
+* [Project Management - Issue Tracking Tickets](http://ticketeeapp.herokuapp.com)
+	* Carried a case study on project management system for issue tracking tickets using Database Management concepts.
+	* Developed an application for the same in Rails following [Test Driven Development](https://travis-ci.org/amandeep511997/ticketee).
+	* Added various features for managing projects development cycle and tracking its progress.
+
 * [Hackerearth API Gem](https://rubygems.org/gems/hackerearth_api)
 	* Created a Ruby library for the official [Hackerearth API](https://www.hackerearth.com/docs/wiki/developers/v3/).
 	* Published gem on RubyGems(Open sourced on [Github](https://amandeep511997.github.io/hackerearth_api/)).
