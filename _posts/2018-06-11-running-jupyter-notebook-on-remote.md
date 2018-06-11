@@ -39,6 +39,5 @@ It would generate an output mentioning the location of the generated configurati
 If you don't pass the port then it will run at the port mentioned in the configuration file which by default is 8888. Also if no mapping of port occur then you can directly use the port at which the notebook server is running.
 
 4. Finally to start using the notebook copy the link which is generated after you started the notebook server then change the IP which will be 0.0.0.0 to the IP of your remote server and the port to the port at which you started the server or to the mapped port in case it exists.
-
 For ex - in my case it was - 
 http://Remote-Server-IP:(PORT or Mapped PORT)/?token=[generated-token-string]
