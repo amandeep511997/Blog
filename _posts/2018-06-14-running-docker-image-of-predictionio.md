@@ -1,8 +1,8 @@
 ---
 layout: post
-title: Running PredictionIO using its Docker
+title: Running PredictionIO using its Docker Image
 tags: [recommendation, prediction-io, python, machine-learning]
-bigimg: /img/posts/2018-06-11-running-jupyter-notebook-on-remote/jupyter.png
+bigimg: /img/posts/2018-06-14-running-docker-image-of-predictionio/predictionio.png
 ---
 
 ### What is PredictionIO?
@@ -15,7 +15,7 @@ There are different types of templates available which can be used as per requir
 
 PredictionIO is open source and is a project of Apache foundation. Currently it supports MLLib and OpenNLP libraries.
 
-### Running PredictionIO using its Docker image
+### Running PredictionIO 
 Running PredictionIO through its docker image is one of the best options and all necessary dependencies are already installed.
 
 We will be using a docker image for the latest version of PredictionIO created by [steveny2k](https://github.com/steveny2k). This image on [Dockerhub](https://hub.docker.com/r/steveny/predictionio/) 
