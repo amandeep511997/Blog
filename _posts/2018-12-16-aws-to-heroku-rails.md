@@ -7,7 +7,7 @@ bigimg: /img/posts/2018-12-16-aws-to-heroku-rails/bigimg.jpg
 
 AWS offers free tier for one year only, after that you may pay or find an alternative. And it is better to find a alternative in case your app is a hobby app, and not for large scale or commercial use.
 
-In this post, I write about how to move your rails application which uses Postgres, Puma and Nginx to Heroku. Apps on Heroku run using dyno hours. Heroku offers 550 dyno hours which are free for each month, after which they will charge you. In case your app is not used much you may consider this option. And if you have credit card you may use it to get an additional of 450 dyno hours giving you 1000 hours which are enough for hobby projects.
+In this post, I write about how to move your rails application which uses Postgres, Puma and Nginx to Heroku. Apps on Heroku run using dyno hours. Heroku offers 550 dyno hours which are free for each month, after which they will charge you. In case your app is not used much you may consider this option. And if you have credit card you may use it to get an additional of 450 dyno hours giving you 1000 hours each month, which are enough for hobby projects.
 
 ## Backing up Data from AWS
 
@@ -23,7 +23,7 @@ Before we close our AWS instance we should backup our data. We can use **pg_dump
         $ pg_dump -U [user-name] -h localhost [database-name] >> [backup-file-name.sql]
     ```
 
-If there is a prompt then give your database password. And you can now see you backup in the current directory.
+If there is a prompt then give your database password. And you can now see the backup file in the current directory.
 
 ## Getting your backup file from AWS to your local machine
 We use scp command for this purpose -
@@ -33,20 +33,19 @@ We use scp command for this purpose -
 ```
 
 Here - 
-1. EC2key.pem is your PEM key. Which you get while creating the instance.
+1. EC2key.pem is your PEM key. Which you get while creating the instance
 2. username is the username you ssh with
 3. public-ip or public-dns is the IP or DNS alias of the instance
-4. path-of-backup-file-on-EC2 is the location where the file is stored on EC2
+4. path-of-backup-file-on-EC2 is the location where you created backup file on EC2
 
 This will copy the file into the current folder on the local machine.
 
 ## Creating an App on Heroku 
 
-Follow the steps below - (In case your app needs storage you can use a S3 bucket for that and use **fog** gem to connect to cloud services) 
+Follow the steps below - 
 
-
-1. First clone you Rails app on you local machine. And navigate to it.
-2. Now you need to login to your heroku account from command line using heroku command line toolbelt
+1. First clone you Rails app on you local machine. And navigate to it.(In case your app needs storage you can use a S3 bucket, for that you can use **fog** gem to connect to cloud services - you must configure everything before moving ahead)
+2. Now you need to login to your heroku account from command line using - heroku command line toolbelt
     ```
         $ heroku login        
     ```
@@ -54,9 +53,9 @@ Follow the steps below - (In case your app needs storage you can use a S3 bucket
     ```
         $ heroku apps:create
     ```
-This will add a git remote to your app, and also give you a web link to your app. You can also open your app using command ```$ heroku open```. You can check remotes using ```$ git remote -v```
-4. Since we were using postgres for AWS settings for postgres DB are already in database.yml file. But you don't need to bother about any changes in it as postresql on heroku will be managed by a heroku addon.
-5. Now we deploy, by pushing our code onn heroku using 
+This will add a git remote to your app, and also give you a web link to your app. You can also open your app using the web url or command ```$ heroku open```. You can check remotes added using ```$ git remote -v```
+4. Since we were using postgres for AWS settings for postgres DB are already in database.yml file. But you don't need to bother about any changes in it as postresql on heroku will be managed by heroku postgres addon.
+5. Now we deploy, by pushing our code on heroku using 
     ```
         $ git push heroku master
     ```
@@ -64,7 +63,7 @@ This will add a git remote to your app, and also give you a web link to your app
     
     > You may get a warning of security vulnerability in case you have done ***config.assets.compile = true***. You may overcome this issue by setting this to false in enviornments/production.rb or by upgrading sprockets gem to version 3.7.2 using ```bundle update sprockets```. After this update you need to push again as this changes Gemfile.lock file. For more information read [here](https://blog.heroku.com/rails-asset-pipeline-vulnerability).
     
-6. We add the ruby version our app uses in the gemfile as - ```ruby "2.x.x"```
+6. We add the ruby version our app uses in the Gemfile as - ```ruby "2.x.x"```
 7. We create a Procfile on the root of our project folder. And add following into it - 
     ```
         web: bundle exec puma -t 5:5 -p ${PORT:-3000} -e ${RACK_ENV:-development}
@@ -138,7 +137,7 @@ Since we want to restore the database backup created we do not run our migration
     ```
         $ heroku pg:psql DATABASE_URL < [backup-file.sql]
     ```
-DATABASE_URL is a constant containing URL of our heroku database.
+DATABASE_URL is a constant containing URL of our heroku database. Make sure you run this command in our project directory which has this constant configured.
 
 ## Managing mailer for Devise confirmation and recoverable
 
@@ -146,7 +145,9 @@ You need to add enviornment variables specifying the **EMAIL** and **PASSWORD** 
 
 In case using gmail add email and password of your gmail account. 
 
-When using gmail we need to **Allow access to less secure apps** to make mailer settings working, otherwise you may get unauthorized error. In case you get a **Net::SMTPAuthentication** error [this](https://stackoverflow.com/questions/18124878/netsmtpauthenticationerror-when-sending-email-from-rails-app-on-staging-envir) can help.
+When using gmail we need to **Allow access to less secure apps** to make mailer settings work, otherwise you may get unauthorized error. 
 
-*Feel free to provide any feedback or report any errors. I have created this post after deploying my own rails application and taking reference from the different sources and the links mentioned in the post.*
+In case you get a **Net::SMTPAuthentication** error [this](https://stackoverflow.com/questions/18124878/netsmtpauthenticationerror-when-sending-email-from-rails-app-on-staging-envir) might help.
+
+*Feel free to provide any feedback or report any errors. I have created this post after deploying my own rails application on heroku and taking reference from different resources and the links mentioned in the post.*
 

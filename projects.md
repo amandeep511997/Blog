@@ -21,7 +21,7 @@ subtitle: These are some of the projects I have worked upon
 	* Created usage documentation(Open sourced on [Github](https://github.com/amandeep511997/codesnippetsAPI)).
 
 
-* [codesnippets](http://codesnippets.org/)
+* [codesnippets](http://codesnippets-org.herokuapp.com/)
 	* Developed a code sharing platform in Rails.
 	* Wrote integration test for some features using RSpec, capybara and factoryGirl.
 	* Used Bootstrap as front-end framework.
