@@ -2,7 +2,7 @@
 layout: post
 title: Moving your Rails app from AWS EC2 to Heroku.
 tags: [aws, rails, heroku]
-bigimg: /img/posts/2018-12-16-aws-to-heroku-rails/bigimg.png
+bigimg: /img/posts/2018-12-16-aws-to-heroku-rails/bigimg.jpeg
 ---
 
 AWS offers free tier for one year only, after that you may pay or find an alternative. And it is better to find a alternative in case your app is a hobby app, and not for large scale or commercial use.
