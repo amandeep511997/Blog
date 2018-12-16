@@ -148,5 +148,5 @@ In case using gmail add email and password of your gmail account.
 
 When using gmail we need to **Allow access to less secure apps** to make mailer settings working, otherwise you may get unauthorized error. In case you get a **Net::SMTPAuthentication** error [this](https://stackoverflow.com/questions/18124878/netsmtpauthenticationerror-when-sending-email-from-rails-app-on-staging-envir) can help.
 
-Feel free to provide any feedback or report any errors. I have created this post after deploying my own rails application and taking reference from the different sources and the links mentioned in the post.
+*Feel free to provide any feedback or report any errors. I have created this post after deploying my own rails application and taking reference from the different sources and the links mentioned in the post.*
 
