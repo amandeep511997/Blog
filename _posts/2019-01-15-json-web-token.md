@@ -1,7 +1,7 @@
 ---
 layout: post
 tags: [aws, rails, heroku]
-bigimg: /img/posts/2019-01-15-json-web-token/jwt.jpg
+bigimg: /img/posts/2019-01-15-json-web-token/jwt.jpeg
 ---
 
 JSON Web Tokens(JWT) is a useful standard because it sends information that can be verified and trusted with a digital signature. It is used for transferring secure data as JSON objects. They are also means of storing data that’s easy to decode and encode.
