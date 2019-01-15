@@ -1,6 +1,6 @@
 ---
 layout: post
-tags: [aws, rails, heroku]
+tags: [json, jwt, api-authentication, rails]
 bigimg: /img/posts/2019-01-15-json-web-token/jwt.jpeg
 ---
 
