@@ -13,5 +13,5 @@ ___
 ### Some of my post on Quora -
 - [How to find second best MST?](http://qr.ae/TU1Cbi)
 - [How to find diameter of a tree?](http://qr.ae/TU1Cbc)
-- [How to learn Rails in a Project oriented manner](http://qr.ae/TU1Cb9)
-
+- [How to learn Rails in a Project oriented manner?](http://qr.ae/TU1Cb9)
+- [How to find Longest Common Increasing Subsequence between two strings?](https://qr.ae/TUnOdN)
