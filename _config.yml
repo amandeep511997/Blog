@@ -28,9 +28,10 @@ navbar-links:
     - Archive: "tags"
     #- Search: "search"
     - Subscribe: "subscribe"
+  Work Experience: "work_experience"
   Projects: "projects"
   Art Work: "artwork"
-  Hymns&Poetry Collection: "https://amandeep511997.github.io/riverFlowsInYou/" 
+  Hymns&Poetry: "https://amandeep511997.github.io/riverFlowsInYou/" 
   Resume: "amandeepSinghResume.pdf"
 
 
