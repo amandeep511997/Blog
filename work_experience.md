@@ -3,7 +3,8 @@ layout: page
 title: Work Experience
 ---
 
-* CodeNation | Software Development Intern | Banglore, India | May 2018 - July 2018
+* CodeNation, May 2018 - July 2018
+    * Worked as Software Development Intern at Codenation, Banglore, India
     * Worked with the Smart Platform team to build a Recommendation as a Service feature
 	* Developed the feature by tuning Apache predictionIO to get the required generalized recommendations
 	* Created an API service for serving recommendations using django and used celery workers for background jobs
